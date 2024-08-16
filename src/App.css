@@ -1,0 +1,46 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    height: 100vh;          /* Sets the container height to the viewport height */
+    
+}
+
+.room{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20%;
+}
+
+.sign-out{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+.header{
+    background-color: #B6D6CC;
+}
+.chat-app{
+    display: flex;
+    background-color: #F1FEC6;
+    flex-direction: column;
+    /* display: inline-block; */
+    border: 2px solid black;
+}
+
+.new-msg{
+    display: flex;
+}
+.messages{
+    
+}
+.user{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
