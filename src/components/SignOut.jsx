@@ -11,8 +11,8 @@ function SignOut({setIsAuth , setRoom}){
         setRoom(null);
       }
     return (
-        <div className="sign-out">
-        <button className="btn btn-danger" onClick={signUserOut}> Sign Out </button>
+        <div className="flex items-center justify-center">
+        <button className="border w-[50%] rounded-full bg-red-400 hover:bg-red-500 mt-2 pl-4 pr-4 p-1" onClick={signUserOut}> Sign Out </button>
       </div>
     )
 }

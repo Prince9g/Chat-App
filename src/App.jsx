@@ -27,10 +27,15 @@ function App() {
         {room ? (
           <Chat room={room}/>
         ) : (
-          <div className="room">
-            <label style={{fontSize: "2.5rem" , fontWeight:500 , fontStyle: 'italic'}}>Enter Room Name:</label>
-            <input className="form-control" ref={roomInputRef} />
-            <button className="btn btn-success " style={{padding: ".25rem 5rem .25rem 5rem", fontSize: "1.25rem", fontWeight:500, marginTop: ".5rem"}} onClick={() => setRoom(roomInputRef.current.value)}>Enter Chat</button>
+          <div className="flex flex-col items-center justify-center h-screen">
+            <div className="flex flex-col justify-center items-center border-2 border-sky-200 p-14 rounded-3xl">
+              <img src="https://cdn-icons-gif.flaticon.com/11186/11186861.gif" className="absolute top-0 h-[25%]"></img>
+            <label className="text-2xl font-semibold mb-2">Enter Room Name:</label>
+            <div className="flex flex-col">
+            <input className="border-2 rounded-full p-1" ref={roomInputRef} />
+            <button className="border rounded-full bg-sky-200 hover:bg-sky-300 mt-2 pl-4 pr-4 p-1" onClick={() => setRoom(roomInputRef.current.value)}>Enter Chat</button>
+            </div>
+            </div>
           </div>
         )}
 

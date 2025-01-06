@@ -43,29 +43,29 @@ export const Chat = ({ room }) => {
     setNewMessage("");
   };
   return (
-    <div className="chat-app">
-      <div className="header">
-        <h1>You're Welcome in: {room.toUpperCase()}</h1>
+    <div className="flex flex-col items-start justify-start mb-12">
+      <div className="mb-2 border-2 border-sky-200 rounded-lg w-full">
+        <h1>You're Welcome in: <span className="text-sky-300">{room.toUpperCase()}</span></h1>
       </div>
-      <div className="messages">
+      <div className="">
         {messages.map((message) => (
-          <div className="message" key={message.id}>
-            <span className="user">{message.user + " : "}</span>
+          <div className="mb-2" key={message.id}>
+            <span className="user"><span className="font-semibold italic">{message.user + " : "}</span></span>
             {message.text}
             {/* you can make here time stamp */}
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className="new-msg">
+      <form onSubmit={handleSubmit} className="flex w-full border-2 border-sky-200 rounded-lg">
         <input
-          className="new-msg-input form-control"
+          className="w-full m-2 focus:outline-none border p-1 rounded"
           placeholder="Type your Message Here..."
           onChange={(e) => {
             setNewMessage(e.target.value);
           }}
           value={newMessage}
         />
-        <button type="submit" className="send-btn btn btn-success">
+        <button type="submit" className="border bg-sky-300  hover:bg-sky-400 pl-[5%] pr-[5%] rounded-lg">
           Send
         </button>
       </form>
